@@ -15,6 +15,9 @@
 		FC10F70D1ECF4F2100A51011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC10F70C1ECF4F2100A51011 /* Assets.xcassets */; };
 		FC10F7101ECF4F2100A51011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC10F70E1ECF4F2100A51011 /* LaunchScreen.storyboard */; };
 		FC10F7181ECF509500A51011 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC10F7171ECF509500A51011 /* GoogleService-Info.plist */; };
+		FCEA40CF1ECF563E00D24411 /* concert-crowd-cropped.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FCEA40CE1ECF563E00D24411 /* concert-crowd-cropped.jpeg */; };
+		FCEA40D11ECF5AA400D24411 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEA40D01ECF5AA400D24411 /* RoundButton.swift */; };
+		FCEA40D31ECF5B8E00D24411 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEA40D21ECF5B8E00D24411 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		FC10F70F1ECF4F2100A51011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC10F7111ECF4F2100A51011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC10F7171ECF509500A51011 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCEA40CE1ECF563E00D24411 /* concert-crowd-cropped.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "concert-crowd-cropped.jpeg"; sourceTree = "<group>"; };
+		FCEA40D01ECF5AA400D24411 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		FCEA40D21ECF5B8E00D24411 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				FC10F7021ECF4F2100A51011 /* AppDelegate.swift */,
 				FC10F7061ECF4F2100A51011 /* Main.storyboard */,
 				FC10F70C1ECF4F2100A51011 /* Assets.xcassets */,
+				FCEA40CE1ECF563E00D24411 /* concert-crowd-cropped.jpeg */,
 				FC10F70E1ECF4F2100A51011 /* LaunchScreen.storyboard */,
 				FC10F7111ECF4F2100A51011 /* Info.plist */,
 				FC10F7091ECF4F2100A51011 /* SocialMediaApp.xcdatamodeld */,
@@ -106,6 +113,8 @@
 		FCEA40CC1ECF52D000D24411 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FCEA40D01ECF5AA400D24411 /* RoundButton.swift */,
+				FCEA40D21ECF5B8E00D24411 /* RoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 			files = (
 				FC10F7101ECF4F2100A51011 /* LaunchScreen.storyboard in Resources */,
 				FC10F70D1ECF4F2100A51011 /* Assets.xcassets in Resources */,
+				FCEA40CF1ECF563E00D24411 /* concert-crowd-cropped.jpeg in Resources */,
 				FC10F7081ECF4F2100A51011 /* Main.storyboard in Resources */,
 				FC10F7181ECF509500A51011 /* GoogleService-Info.plist in Resources */,
 			);
@@ -243,6 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEA40D11ECF5AA400D24411 /* RoundButton.swift in Sources */,
+				FCEA40D31ECF5B8E00D24411 /* RoundedButton.swift in Sources */,
 				FC10F70B1ECF4F2100A51011 /* SocialMediaApp.xcdatamodeld in Sources */,
 				FC10F7051ECF4F2100A51011 /* SignInVC.swift in Sources */,
 				FC10F7031ECF4F2100A51011 /* AppDelegate.swift in Sources */,
