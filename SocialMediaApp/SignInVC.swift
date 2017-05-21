@@ -12,12 +12,12 @@ import FBSDKLoginKit
 
 class SignInVC: UIViewController {
 
+    @IBOutlet var EmailField: UITextField!
+    @IBOutlet var PasswordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let loginButton = FBSDKLoginButton()
-        view.addSubview(loginButton)
-        loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 50)
+        // Do any additional setup after loading the view, typically from a nib.  
     }
 
     @IBAction func FBButtonClicked(_ sender: AnyObject) {
@@ -50,5 +50,26 @@ class SignInVC: UIViewController {
         })
     }
     
+    @IBAction func SignInBtn(_ sender: AnyObject) {
+        
+        if let email = EmailField.text, let pwd = PasswordField.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("ADAM: Email user authenticated with Firebase")
+                }
+                else {
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error == nil {
+                            print("ADAM: Created user successfully")
+                        }
+                        else {
+                            print("ADAM: Error creating user - \(error)")
+                        }
+                    })
+                }
+            })
+        }
+        
+    }
 }
 
