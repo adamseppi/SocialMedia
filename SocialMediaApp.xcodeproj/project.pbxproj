@@ -15,6 +15,7 @@
 		FC10F70D1ECF4F2100A51011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC10F70C1ECF4F2100A51011 /* Assets.xcassets */; };
 		FC10F7101ECF4F2100A51011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC10F70E1ECF4F2100A51011 /* LaunchScreen.storyboard */; };
 		FC10F7181ECF509500A51011 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC10F7171ECF509500A51011 /* GoogleService-Info.plist */; };
+		FCCEA17F1ED1F99100E3F9D0 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCEA17E1ED1F99100E3F9D0 /* FeedVC.swift */; };
 		FCEA40CF1ECF563E00D24411 /* concert-crowd-cropped.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FCEA40CE1ECF563E00D24411 /* concert-crowd-cropped.jpeg */; };
 		FCEA40D11ECF5AA400D24411 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEA40D01ECF5AA400D24411 /* RoundButton.swift */; };
 		FCEA40D31ECF5B8E00D24411 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEA40D21ECF5B8E00D24411 /* RoundedButton.swift */; };
@@ -33,6 +34,8 @@
 		FC10F70F1ECF4F2100A51011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC10F7111ECF4F2100A51011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC10F7171ECF509500A51011 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCCEA17E1ED1F99100E3F9D0 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		FCCEA1801ED1FFD800E3F9D0 /* SocialMediaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMediaApp.entitlements; sourceTree = "<group>"; };
 		FCEA40CE1ECF563E00D24411 /* concert-crowd-cropped.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "concert-crowd-cropped.jpeg"; sourceTree = "<group>"; };
 		FCEA40D01ECF5AA400D24411 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		FCEA40D21ECF5B8E00D24411 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		FC10F7011ECF4F2100A51011 /* SocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				FCCEA1801ED1FFD800E3F9D0 /* SocialMediaApp.entitlements */,
 				FCEA40CD1ECF52D600D24411 /* Controller */,
 				FCEA40CC1ECF52D000D24411 /* View */,
 				FCEA40CB1ECF52C900D24411 /* Model */,
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				FC10F7041ECF4F2100A51011 /* SignInVC.swift */,
+				FCCEA17E1ED1F99100E3F9D0 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -164,6 +169,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8YA35LDKMD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -253,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCEA17F1ED1F99100E3F9D0 /* FeedVC.swift in Sources */,
 				FCEA40D11ECF5AA400D24411 /* RoundButton.swift in Sources */,
 				FCEA40D31ECF5B8E00D24411 /* RoundedButton.swift in Sources */,
 				FC10F70B1ECF4F2100A51011 /* SocialMediaApp.xcdatamodeld in Sources */,
@@ -381,6 +392,7 @@
 			baseConfigurationReference = E6851D94A1E3BAA05A9935E6 /* Pods-SocialMediaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMediaApp/SocialMediaApp.entitlements;
 				DEVELOPMENT_TEAM = 8YA35LDKMD;
 				INFOPLIST_FILE = SocialMediaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -395,6 +407,7 @@
 			baseConfigurationReference = 690A4C1DF2ED9F5F2219F8A7 /* Pods-SocialMediaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMediaApp/SocialMediaApp.entitlements;
 				DEVELOPMENT_TEAM = 8YA35LDKMD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

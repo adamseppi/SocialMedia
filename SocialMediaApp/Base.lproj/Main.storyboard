@@ -122,11 +122,63 @@
                     <connections>
                         <outlet property="EmailField" destination="mpU-13-9M5" id="sRw-9y-NKH"/>
                         <outlet property="PasswordField" destination="QpW-uM-kGl" id="JSj-fh-bFT"/>
+                        <segue destination="JS8-k0-GwC" kind="show" identifier="goToFeed" id="NR3-s2-sBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="126.38680659670166"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="zk1-hM-wfa">
+            <objects>
+                <viewController id="JS8-k0-GwC" customClass="FeedVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6yS-wp-09t"/>
+                        <viewControllerLayoutGuide type="bottom" id="ctY-9R-DZk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gaj-jX-VUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3S-TB-d6c" customClass="RoundedButton" customModule="SocialMediaApp" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="31W-ZV-CXC"/>
+                                    <constraint firstAttribute="width" constant="108" id="PtX-ok-Daq"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SignInBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2L-Wz-Seu"/>
+                                    <action selector="signOutPressed:" destination="JS8-k0-GwC" eventType="touchUpInside" id="l9y-qP-707"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18902055370000001" green="0.1058823529" blue="0.37350566280000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="A3S-TB-d6c" firstAttribute="centerY" secondItem="gaj-jX-VUf" secondAttribute="centerY" id="A9x-p1-3pL"/>
+                            <constraint firstItem="A3S-TB-d6c" firstAttribute="centerX" secondItem="gaj-jX-VUf" secondAttribute="centerX" id="w7I-Ar-dfX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="bd7-XE-wPJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0p6-u7-bDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029.5999999999999" y="131.78410794602701"/>
         </scene>
     </scenes>
     <resources>
