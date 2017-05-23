@@ -190,12 +190,16 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="FEd-mM-utW">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="dFr-OV-OPD">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="dFr-OV-OPD">
                                                 <color key="backgroundColor" red="0.18902055370000001" green="0.1058823529" blue="0.37350566280000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="58" id="LD1-ry-RLE"/>
                                                     <constraint firstAttribute="height" constant="58" id="b73-cJ-tww"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="w9O-Ng-F1D" appends="YES" id="Lcl-ZO-vtv"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBC-Ot-1hU">
                                                 <constraints>
@@ -250,7 +254,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="374" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-Gn-uWu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="374" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SEa-Gn-uWu">
                                 <frame key="frameInset" minY="148" width="375" height="519"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -269,7 +273,7 @@
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BbV-mh-FK7">
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="SKg-vC-DzT">
+                                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="SKg-vC-DzT">
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="58" id="XX9-f4-1ZN"/>
                                                                                 <constraint firstAttribute="height" constant="58" id="hdN-3X-6ak"/>
@@ -385,11 +389,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="dFr-OV-OPD" id="rtV-Ee-OMP"/>
                         <outlet property="tableView" destination="SEa-Gn-uWu" id="9fa-Bi-63c"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="bd7-XE-wPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0p6-u7-bDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w9O-Ng-F1D">
+                    <connections>
+                        <action selector="addImageTapped:" destination="JS8-k0-GwC" id="JzA-eT-XjF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="131.78410794602701"/>
         </scene>
